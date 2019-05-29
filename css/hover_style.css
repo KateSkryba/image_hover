@@ -1,0 +1,294 @@
+  * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+
+  body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: 'Roboto', sans-serif;
+  }
+
+  h1 {
+	flex-basis: 10vh;
+	text-align: center;
+	line-height: 10vh;
+	width: 100%;
+	position: fixed;
+	background-color: #8fbbbc;
+	color: white;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 700;
+	z-index: 2;
+  }
+ 
+
+  section {
+	width: 80vw;
+	margin: 18vh auto 4vh auto;
+   /* as a flex element */
+   flex-grow: 1;
+   /* as a flex container */
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-content: space-between;
+  }
+
+  section>div.postcard {
+   flex-basis: 33%;
+   padding: 10px;
+  }
+
+  section div.postcard img {
+   width: 100%;
+  }
+ 
+ /* hover effects */
+
+.overlay1 {
+	position: relative;
+	overflow: hidden;
+	}
+
+.overlay1 .link {
+    position: absolute;
+	dispaly: block;
+    width: 100%;
+    height: 16px;
+    background-color: #ffffe6;
+	opacity: 0.6;
+    top: 50%;
+    left: 100%;
+	transform: translateY(-50%);
+    transition: left 0.2s, height 0.2s 0.2s;
+    z-index: 1;
+	text-decoration:none;
+    }
+		
+.overlay1:hover .link {
+     left: 0;
+     height: 100%;
+    }
+	
+.overlay1 p	{
+	color: #111;
+	font-size: 28px;
+	top: 12px;
+	opacity: 0;
+	transition: opacity 0.2s 0.2s;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	}
+
+.overlay1:hover p {
+	opacity:1;
+	}
+ 
+.overlay2 {
+	position: relative;
+	overflow: hidden;
+	}
+
+.overlay2 .link {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffe6;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+	transition: opacity 0.4s ease-in-out;
+	text-decoration: none;
+	}
+
+.overlay2:hover .link {
+	opacity: 0.6;
+	}
+
+.icon {
+	display: block;
+	position: relative;
+	top: 23%;
+	font-size: 82px;
+	text-align: center;
+	color: #111;
+	}
+
+.icon p {
+	font-size: 26px;
+	margin-top: 5px;
+	}
+
+.overlay3 {
+	position: relative;
+	overflow: hidden;
+	}	
+
+.overlay3 .link {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 25%;
+	background-color: #ffffe6;
+	left: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: opacity 0.4s ease-in-out;
+	text-decoration: none;
+	}
+
+.overlay3:hover .link {
+	opacity: 0.6;
+	}
+
+.overlay3 p {
+	color: #111;
+	font-size: 26px;
+	text-align: center;
+	line-height: 200%;
+	}
+
+
+.overlay4 {
+	position: relative;
+	overflow: hidden;
+	}	
+
+.overlay4 p {
+	position: absolute;
+	display: block;
+	width: 60%;
+	top: 10%;
+	left: -60%;
+	color: white;
+	font-size: 26px;
+	text-transform: uppercase;
+	border-bottom: 2px solid white;
+	padding: 0 65px 5px 0;	
+	opacity: 1;
+	transition: opacity 0.4s, left 0.4s;
+	}
+
+.overlay4:hover p {
+	opacity: 1;
+	left: 7%;
+	}
+.overlay4 img {
+	transition: sepia 0.4s ease-in-out;
+	}
+.overlay4:hover img {
+	filter: sepia(30%);
+	}
+
+.overlay5 {
+	position:relative;
+	overflow:hidden;
+	opacity:1;
+	transition: opacity 0.4s;
+	}
+
+.overlay5 .border {
+	position: absolute;
+	width: 70%;
+	height: 20%;
+	border: 2px solid white;
+	top: -50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.4s ease-in-out;
+	}
+	
+.overlay5 p {
+	position: absolute;
+	top: 103%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	color :white;
+	font-size: 26px;
+	text-transform: uppercase;
+	transition: top 0.4s ease-in-out;
+	}
+	
+
+.overlay5 .link {
+	text-decoration:none;
+}
+
+.overlay5:hover .border {
+	top:70%;
+	}
+
+.overlay5:hover p {
+	top:70%;
+	}	
+	
+.overlay5:hover {
+	opacity:0.9;
+	}
+	
+.photo6 {
+	overflow: hidden;
+	transition: transform 0.3s linear, border-radius 0.2s linear, filter 0.3s;
+	}
+
+.photo6:hover  {
+	-webkit-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	transform: scale(0.95);
+	border-radius: 15%;
+	-webkit-filter: sepia(75%);
+	filter: sepia(40%);
+	}
+
+.photo7 {
+	overflow:hidden;
+	}
+
+.photo7 img {
+	transition: transform 0.6s ease-in-out;
+	}
+
+.photo7:hover img {
+	-webkit-transform: scale(1.2));
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+	}
+
+.photo8 {
+	transition: filter 0.6s linear;
+	}
+
+.photo8:hover {
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+	}
+
+.photo9 {
+	transition: filter 0.6s linear;
+	}
+
+.photo9:hover {
+	-webkit-filter: blur(1px);
+	filter: blur(1px);
+	}
+
+@media(max-width:920px) {
+	section>div.postcard {
+		flex-basis:50%;
+		padding:5px;
+	}
+}
+
+@media(max-width:540px) {
+	section>div.postcard {
+		flex-basis:100%;
+	}
+}
+
